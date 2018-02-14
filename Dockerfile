@@ -55,6 +55,7 @@ RUN pip install --upgrade pip
 RUN pip install --ignore-installed --upgrade tensorflow 
 RUN conda install -c menpo opencv3
 RUN apt-get -y install libgtk2.0-0 python-qt4 
+RUN pip install tensorboard
 
 ADD import_test.ipynb $NOTEBOOK_HOME
 CMD ["sh", "-c", "jupyter notebook"]
