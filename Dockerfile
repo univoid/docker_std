@@ -58,5 +58,5 @@ RUN apt-get -y install libgtk2.0-0 python-qt4
 RUN pip install tensorboard
 
 ADD import_test.ipynb $NOTEBOOK_HOME
-CMD ["sh", "-c", "jupyter notebook"]
+CMD ["sh", "-c", "jupyter notebook > $NOTEBOOK_HOME/log.txt 2>&1"]
 
