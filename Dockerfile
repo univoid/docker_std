@@ -32,6 +32,8 @@ RUN pyenv rehash
 
 RUN conda update -y conda
 RUN conda install -y accelerate 
+RUN conda install numpy
+RUN conda install -c intel mkl
 
 RUN echo "cloning dotfiles"
 WORKDIR $HOME
